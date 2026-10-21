@@ -8,26 +8,26 @@ Official Homebrew tap for software by [@spoutin](https://github.com/spoutin).
 
 ### Casks (macOS GUI Applications)
 
-| Application | Description | Install Command |
+| Application | Release Channel | Install Command |
 |---|---|---|
-| **KeyHUD** | Instant floating shortcut cheatsheet & hotkey HUD for macOS, Ghostty, and CLI/TUI tools | `brew install --cask spoutin/tap/keyhud` |
+| **KeyHUD** | **Stable** | `brew install --cask spoutin/tap/keyhud` |
+| **KeyHUD (Beta)** | **Pre-release / Beta** | `brew install --cask spoutin/tap/keyhud@beta` |
 
 ---
 
 ## Installation
 
-Install directly with:
-
+### Stable Channel
 ```bash
 brew install --cask spoutin/tap/keyhud
 ```
 
-Or add the tap first:
-
+### Beta / Pre-Release Channel
 ```bash
-brew tap spoutin/tap
-brew install --cask keyhud
+brew install --cask spoutin/tap/keyhud@beta
 ```
+
+*(Note: `keyhud` and `keyhud@beta` are mutually exclusive. To switch channels, run `brew uninstall --cask keyhud` followed by installing the other).*
 
 ---
 
@@ -35,5 +35,6 @@ brew install --cask keyhud
 
 ```bash
 brew update
-brew upgrade keyhud
+brew upgrade keyhud        # For stable
+brew upgrade keyhud@beta   # For beta
 ```
