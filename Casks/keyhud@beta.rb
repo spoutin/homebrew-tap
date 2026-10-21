@@ -13,7 +13,7 @@ cask "keyhud@beta" do
 
   app "KeyHUD.app"
 
-  postflight_steps do
+  postflight do
     system_command "/usr/bin/xattr",
                    args: ["-cr", "#{appdir}/KeyHUD.app"]
   end
